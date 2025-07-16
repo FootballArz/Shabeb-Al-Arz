@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shabab Al Arz Football Team</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #f0f7ff;
+      color: #003366;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      background: #004aad;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.8rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+    main {
+      flex: 1;
+      padding: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .about {
+      max-width: 700px;
+      margin-bottom: 40px;
+      line-height: 1.6;
+      font-size: 1.1rem;
+    }
+    .about img {
+      width: 100%;
+      max-width: 700px;
+      border-radius: 12px;
+      margin-top: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .apply-btn {
+      background: #004aad;
+      color: white;
+      border: none;
+      padding: 18px 40px;
+      font-size: 1.4rem;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      box-shadow: 0 6px 12px rgba(0,74,173,0.4);
+      text-decoration: none;
+      margin-bottom: 60px;
+      user-select: none;
+    }
+    .apply-btn:hover {
+      background: #003366;
+      box-shadow: 0 8px 16px rgba(0,51,102,0.6);
+    }
+    footer {
+      background: #004aad;
+      color: white;
+      padding: 15px 10px;
+      text-align: center;
+      font-size: 1rem;
+      user-select: none;
+    }
+    @media (max-width: 600px) {
+      .apply-btn {
+        padding: 15px 30px;
+        font-size: 1.2rem;
+      }
+      .about {
+        font-size: 1rem;
+        margin-bottom: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>Shabab Al Arz Football Team</header>
+  <main>
+    <section class="about">
+      <h2>About Our Team</h2>
+      <p>
+        Shabab Al Arz is a football team built on strength, passion, and unity. 
+        Founded many years ago, we have a rich history of fierce competition, teamwork, 
+        and dedication that has helped us rise through the ranks.
+      </p>
+      <p>
+        Our players are not just athletes; they are warriors on the field, committed 
+        to pushing the limits and inspiring the next generation of footballers in our community.
+      </p>
+      <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=80" alt="Football Team" />
+    </section>
+    <a href="application.html" class="apply-btn" role="button">Apply to Join</a>
+  </main>
+  <footer>
+    Contact Us: <strong>+961 78895345</strong><br />
+    About Us: I will tell you later.
+  </footer>
+</body>
+</html>

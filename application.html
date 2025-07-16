@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shabab Al Arz - Application Form</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #f0f7ff;
+      color: #003366;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      background: #004aad;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.8rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+    main {
+      flex: 1;
+      padding: 20px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    form {
+      background: white;
+      padding: 25px 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,74,173,0.15);
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: #004aad;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px 12px;
+      margin-top: 6px;
+      border-radius: 8px;
+      border: 1.5px solid #004aad;
+      font-size: 1rem;
+      font-family: inherit;
+      resize: vertical;
+    }
+    textarea {
+      min-height: 80px;
+    }
+    .radio-group {
+      margin-top: 6px;
+    }
+    .radio-group label {
+      font-weight: normal;
+      margin-right: 15px;
+      color: #003366;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    button {
+      margin-top: 25px;
+      background: #004aad;
+      color: white;
+      border: none;
+      padding: 15px 40px;
+      font-size: 1.2rem;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      user-select: none;
+    }
+    button:hover {
+      background: #003366;
+    }
+    .back-link {
+      display: inline-block;
+      margin-top: 15px;
+      color: #004aad;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>Application Form - Shabab Al Arz</header>
+  <main>
+    <form id="application-form" action="mailto:moudy12oo@gmail.com" method="POST" enctype="text/plain" onsubmit="return validateForm()">
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" name="Full Name" required />
+
+      <label for="age">Age</label>
+      <input type="number" id="age" name="Age" min="10" max="60" required />
+
+      <label for="phone">Contact Number</label>
+      <input type="tel" id="phone" name="Contact Number" pattern="[0-9+\-\s]+" placeholder="+1234567890" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="Email Address" required />
+
+      <label for="position">Preferred Playing Position</label>
+      <select id="position" name="Preferred Playing Position" required>
+        <option value="" disabled selected>Select your position</option>
+        <option>Goalkeeper</option>
+        <option>Defender</option>
+        <option>Midfielder</option>
+        <option>Forward</option>
+      </select>
+
+      <label for="experience">Years of Football Experience</label>
+      <input type="number" id="experience" name="Years of Football Experience" min="0" max="50" required />
+
+      <label for="teams">Current/Previous Team(s)</label>
+      <input type="text" id="teams" name="Current or Previous Teams" placeholder="If any" />
+
+      <label for="certifications">Football Training or Coaching Certifications</label>
+      <textarea id="certifications" name="Football Training or Coaching Certifications" placeholder="If any"></textarea>
+
+      <label for="skills">Describe Your Strongest Football Skills</label>
+      <textarea id="skills" name="Strongest Football Skills" required></textarea>
+
+      <label>Are you currently injured or have any medical conditions?</label>
+      <div class="radio-group">
+        <label><input type="radio" name="Medical Conditions" value="No" required /> No</label>
+        <label><input type="radio" name="Medical Conditions" value="Yes" /> Yes</label>
+      </div>
+
+      <label>Are you available for regular training sessions?</label>
+      <div class="radio-group">
+        <label><input type="radio" name="Available for Training" value="Yes" required /> Yes</label>
+        <label><input type="radio" name="Available for Training" value="No" /> No</label>
+      </div>
+
+      <label for="commitments">Do you have any other commitments that could affect your participation?</label>
+      <textarea id="commitments" name="Other Commitments"></textarea>
+
+      <label for="motivation">Why do you want to join Shabab Al Arz?</label>
+      <textarea id="motivation" name="Motivation to Join" required></textarea>
+
+      <label for="goals">What are your goals as a player?</label>
+      <textarea id="goals" name="Player Goals" required></textarea>
+
+      <label for="additional">Anything else you want us to know?</label>
+      <textarea id="additional" name="Additional Comments"></textarea>
+
+      <button type="submit">Submit Application</button>
+    </form>
+    <a href="index.html" class="back-link">&larr; Back to Home</a>
+  </main>
+
+  <script>
+    function validateForm() {
+      const form = document.getElementById('application-form');
+      if (!form.checkValidity()) {
+        alert('Please fill out all required fields correctly.');
+        return false;
+      }
+      alert('Form will open your email client to send the application.');
+      return true;
+    }
+  </script>
+</body>
+</html>
